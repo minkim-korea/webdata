@@ -21,3 +21,4 @@ browser.get(url)
 time.sleep(3)#페이지 로딩대기
 print(browser.page_source)
 soup=BeautifulSoup(browser.page_source,"lxml")
+
