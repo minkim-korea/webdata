@@ -22,3 +22,8 @@ time.sleep(3)#페이지 로딩대기
 print(browser.page_source)
 soup=BeautifulSoup(browser.page_source,"lxml")
 
+
+data = soup.find("ul",{"class":"list__best"})
+data2 = data.find_all("li",{"class":"list-item"})
+fish = data2[0].find("a").get_text()
+print(fish)
